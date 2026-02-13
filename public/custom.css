@@ -4,6 +4,7 @@
     --brand-blue: hsl(223, 88%, 35%);
     --brand-blue-alt: #0d48e2;
     --brand-yellow: #fedf00;
+    --header-bg: rgba(6, 32, 96, 0.6);
 }
 
 /* --- NAVBAR OVERRIDES --- */
@@ -224,5 +225,5 @@ section#contact form#contactForm .form-group textarea {
 
 /* --- HEADER BACKGROUND FILTER --- */
 header.masthead {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/img/header-bg.png");
+    background-image: linear-gradient(var(--header-bg), var(--header-bg)), url("./assets/img/header-bg.png");
 }
