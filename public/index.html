@@ -421,7 +421,7 @@
             <!-- FormSubmit.co Contact Form -->
             <!-- We use the AJAX endpoint here for JS handling, but the script handles the actual fetch -->
             <form id="contactForm" class="needs-validation" novalidate
-                action="https://formsubmit.co/ajax/jansamatej880@gmail.com" method="POST">
+                action="https://formsubmit.co/ajax/petr.garcek@seznam.cz" method="POST">
 
                 <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="Nová zpráva z webu Naše Rtyně">
@@ -544,6 +544,7 @@
                 const formData = new FormData(form);
 
                 // Send Fetch Request to FormSubmit
+                // Send Fetch Request to FormSubmit
                 fetch(form.action, {
                     method: 'POST',
                     body: formData,
@@ -551,26 +552,27 @@
                         'Accept': 'application/json'
                     }
                 })
-                    .then(response => {
-                        if (response.ok) {
-                            // Success!
-                            form.reset(); // Clear inputs
-                            form.classList.remove('was-validated'); // Clear validation styles
-                            form.style.display = 'none'; // Hide the form
-                            successMessage.classList.remove('d-none'); // Show success message
-                            errorMessage.classList.add('d-none'); // Ensure error is hidden
+                    .then(response => response.json()) // 1. Parse the JSON response from the server
+                    .then(data => {                    // 2. Work with the parsed data
+                        if (String(data.success) === "true") {
+                            // Zpráva úspěšně odeslána!
+                            form.reset(); // Clear
+                            form.classList.remove('was-validated'); // Remove validation styles
+                            form.style.display = 'none'; // Hide form
+                            successMessage.classList.remove('d-none');
+                            errorMessage.classList.add('d-none');
                         } else {
-                            // Server Error
-                            throw new Error('Server returned ' + response.status);
+                            // Server vrátil chybu (např. spam, špatný formát)
+                            throw new Error('Server zamítl odeslání.');
                         }
                     })
                     .catch(error => {
-                        // Network Error
+                        // Chyba sítě nebo zachycená chyba výše
                         console.error('Submission error:', error);
                         errorMessage.classList.remove('d-none');
                     })
                     .finally(() => {
-                        // Reset Button State (only if form is still visible/error occurred)
+                        // Resetovat tlačítko (pouze pokud je formulář stále viditelný / nastala chyba)
                         if (!successMessage.classList.contains('d-none')) return;
                         submitButton.innerText = originalBtnText;
                         submitButton.disabled = false;
