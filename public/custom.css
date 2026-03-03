@@ -247,3 +247,8 @@ header.masthead {
 #vize ul li strong {
     display: inline-block;
 }
+
+/* Team */
+.team-member img {
+    object-fit: cover;
+}
