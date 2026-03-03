@@ -421,20 +421,20 @@
             <!-- FormSubmit.co Contact Form -->
             <!-- We use the AJAX endpoint here for JS handling, but the script handles the actual fetch -->
             <form id="contactForm" class="needs-validation" novalidate
-                action="https://formsubmit.co/ajax/info@nasertyne.cz" method="POST">
+                action="https://formsubmit.co/ajax/jansamatej880@gmail.com" method="POST">
 
                 <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="Nová zpráva z webu Naše Rtyně">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="box">
-                <!-- ADDED: Multiple recipients via CC. Replace the values below with real emails. -->
-                <input type="hidden" name="_cc" value="kolega@nasertyne.cz,asistent@nasertyne.cz">
+                <!-- Multiple recipients via CC. Replace the values below with real emails. -->
+                <input type="hidden" name="_cc" value="">
 
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-6">
                         <div class="form-group">
                             <!-- Name input-->
-                            <input class="form-control" id="name" name="name" type="text" placeholder="Vaše jméno *"
+                            <input class="form-control" id="name" name="jméno" type="text" placeholder="Vaše jméno *"
                                 required />
                             <div class="invalid-feedback">Prosím vyplňte vaše jméno.</div>
                         </div>
@@ -446,7 +446,7 @@
                         </div>
                         <div class="form-group mb-md-0">
                             <!-- Phone number input-->
-                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Váš Telefon *"
+                            <input class="form-control" id="phone" name="telefon" type="tel" placeholder="Váš Telefon *"
                                 required />
                             <div class="invalid-feedback">Prosím vyplňte telefonní číslo.</div>
                         </div>
@@ -454,7 +454,7 @@
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
                             <!-- Message input-->
-                            <textarea class="form-control" id="message" name="message" placeholder="Vaše zpráva *"
+                            <textarea class="form-control" id="message" name="zpráva" placeholder="Vaše zpráva *"
                                 required></textarea>
                             <div class="invalid-feedback">Prosím napište zprávu.</div>
                         </div>
