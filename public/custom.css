@@ -252,3 +252,27 @@ header.masthead {
 .team-member img {
     object-fit: cover;
 }
+
+/* Masthead */
+header.masthead .masthead-subheading {
+    margin-bottom: 2rem;
+}
+
+header.masthead .masthead-heading {
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 17rem;
+        padding-bottom: 12.5rem;
+    }
+
+    header.masthead .masthead-subheading {
+        margin-bottom: 4rem;
+    }
+
+    header.masthead .masthead-heading {
+        margin-bottom: 2rem;
+    }
+}
