@@ -20,17 +20,17 @@
           "url": "https://nasertyne.cz"
         }
         </script>
-        <script type="application/ld+json">
-                {
-                    "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "name": "Naše Rtyně",
-                    "url": "https://nasertyne.cz",
-                    "email": "mailto:nase.rtyne@gmail.com",
-                    "logo": "https://nasertyne.cz/assets/img/navbar-logo.png",
-                    "sameAs": ["https://www.facebook.com/61586873237147"]
-                }
-                </script>
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Naše Rtyně",
+                "url": "https://nasertyne.cz",
+                "email": "mailto:nase.rtyne@gmail.com",
+                "logo": "https://nasertyne.cz/assets/img/navbar-logo.png",
+                "sameAs": ["https://www.facebook.com/61586873237147"]
+            }
+    </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -129,8 +129,7 @@
                     </p>
 
                     <a class="btn btn-primary btn-xl text-uppercase shadow-lg" id="dotaznikCta" href="/dotaznik"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                        target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-edit me-2"></i> Vyplnit dotazník
                     </a>
                 </div>
@@ -423,7 +422,7 @@
             </div>
             <ul class="timeline">
                 <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
                             loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -437,7 +436,7 @@
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
                             loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -451,7 +450,7 @@
                     </div>
                 </li>
                 <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
                             loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -465,7 +464,7 @@
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
                             loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -784,7 +783,8 @@
             <div class="d-none" id="submitErrorMessage">
                 <div class="text-center text-danger mt-3">
                     <div>Chyba při odesílání zprávy. Zkuste to prosím později.</div>
-                    <div class="small mt-2">Případně nás kontaktujte přímo na <a href="mailto:nase.rtyne@gmail.com" class="text-warning">nase.rtyne@gmail.com</a></div>
+                    <div class="small mt-2">Případně nás kontaktujte přímo na <a href="mailto:nase.rtyne@gmail.com"
+                            class="text-warning">nase.rtyne@gmail.com</a></div>
                 </div>
             </div>
 
@@ -946,7 +946,7 @@
             });
 
             // Election countdown (hidden when expired)
-            (function(){
+            (function () {
                 var target = new Date('2026-10-09T10:00:00');
                 var el = document.getElementById('electionCountdown');
                 if (!el) return;
@@ -955,7 +955,7 @@
                 var minsEl = document.getElementById('count-mins');
                 var secsEl = document.getElementById('count-secs');
 
-                var update = function(){
+                var update = function () {
                     var now = new Date();
                     var diff = target - now;
                     if (diff <= 0) {
@@ -965,18 +965,18 @@
                         clearInterval(timer);
                         return;
                     }
-                    var s = Math.floor(diff/1000);
-                    var days = Math.floor(s/86400); s -= days*86400;
-                    var hours = Math.floor(s/3600); s -= hours*3600;
-                    var mins = Math.floor(s/60); s -= mins*60;
+                    var s = Math.floor(diff / 1000);
+                    var days = Math.floor(s / 86400); s -= days * 86400;
+                    var hours = Math.floor(s / 3600); s -= hours * 3600;
+                    var mins = Math.floor(s / 60); s -= mins * 60;
                     var secs = s;
-                    if (daysEl) daysEl.textContent = String(days).padStart(2,'0');
-                    if (hoursEl) hoursEl.textContent = String(hours).padStart(2,'0');
-                    if (minsEl) minsEl.textContent = String(mins).padStart(2,'0');
-                    if (secsEl) secsEl.textContent = String(secs).padStart(2,'0');
+                    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+                    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+                    if (minsEl) minsEl.textContent = String(mins).padStart(2, '0');
+                    if (secsEl) secsEl.textContent = String(secs).padStart(2, '0');
                 };
                 update();
-                var timer = setInterval(update,1000);
+                var timer = setInterval(update, 1000);
                 // track that countdown was shown
                 if (typeof analyticsEvent === 'function') analyticsEvent('election_countdown_view');
             })();
