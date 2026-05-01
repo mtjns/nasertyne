@@ -7,6 +7,8 @@
     <meta name="description"
         content="Oficiální web sdružení Naše Rtyně. Jsme tým sousedů, kterým není lhostejné, kde žijí. Společně chceme vytvořit lepší místo pro nás všechny." />
     <meta name="author" content="Naše Rtyně" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nasertyne.cz/" />
     <title>Naše Rtyně | Sdružení nezávislých kandidátů</title>
     <!-- Schema.org markup for Google Search Console -->
     <script type="application/ld+json">
@@ -18,6 +20,17 @@
           "url": "https://nasertyne.cz"
         }
         </script>
+        <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "Naše Rtyně",
+                    "url": "https://nasertyne.cz",
+                    "email": "mailto:nase.rtyne@gmail.com",
+                    "logo": "https://nasertyne.cz/assets/img/navbar-logo.png",
+                    "sameAs": ["https://www.facebook.com/61586873237147"]
+                }
+                </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -38,6 +51,9 @@
 
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
+
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://nase-rtyne.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -112,7 +128,8 @@
                         fungujícímu městu.
                     </p>
 
-                    <a class="btn btn-primary btn-xl text-uppercase shadow-lg" href="/dotaznik" target="_blank"
+                    <a class="btn btn-primary btn-xl text-uppercase shadow-lg" id="dotaznikCta" href="/dotaznik"
+                        target="_blank"
                         rel="noopener noreferrer">
                         <i class="fas fa-edit me-2"></i> Vyplnit dotazník
                     </a>
@@ -406,8 +423,8 @@
             </div>
             <ul class="timeline">
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
-                            alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
+                            loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>Leden 2026</h4>
@@ -420,8 +437,8 @@
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
-                            alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
+                            loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>Březen 2026</h4>
@@ -434,8 +451,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
-                            alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
+                            loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>Květen 2026</h4>
@@ -448,8 +465,8 @@
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
-                            alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
+                            loading="lazy" decoding="async" width="170" height="170" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>Červenec 2026</h4>
@@ -494,7 +511,8 @@
                 <!-- Petr Garček -->
                 <div class="col-lg-4 col-md-5 mb-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/1.jpg" class="rounded-circle scale" alt="Petr Garček" />
+                        <img src="assets/img/team/1.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Petr Garček" />
                         <h4>Petr Garček</h4>
                         <p class="text-muted">oblastní zástupce<br>zmocněnec sdružení</p>
                     </div>
@@ -503,7 +521,8 @@
                 <!-- Petra Dědková -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/8.jpg" class="rounded-circle scale" alt="Petra Dědková" />
+                        <img src="assets/img/team/8.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Petra Dědková" />
                         <h4>BcA. Ing. Petra Dědková</h4>
                         <p class="text-muted">ředitelka tanečního studia</p>
                     </div>
@@ -512,7 +531,8 @@
                 <!-- Lukáš Nývlt -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/6.jpg" class="rounded-circle scale" alt="Lukáš Nývlt" />
+                        <img src="assets/img/team/6.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Lukáš Nývlt" />
                         <h4>Lukáš Nývlt</h4>
                         <p class="text-muted">vedoucí skladu</p>
                     </div>
@@ -521,7 +541,8 @@
                 <!-- Jan Franěk -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/4.jpg" class="rounded-circle scale" alt="Jan Franěk" />
+                        <img src="assets/img/team/4.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Jan Franěk" />
                         <h4>Bc. Jan Franěk</h4>
                         <p class="text-muted">specialista kontrolor</p>
                     </div>
@@ -530,7 +551,8 @@
                 <!-- Aleš Jansa -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/2.jpg" class="rounded-circle scale" alt="Aleš Jansa" />
+                        <img src="assets/img/team/2.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Aleš Jansa" />
                         <h4>Aleš Jansa</h4>
                         <p class="text-muted">živnostník</p>
                     </div>
@@ -539,7 +561,8 @@
                 <!-- Hana Plašilová -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/3.jpg" class="rounded-circle scale" alt="Hana Plašilová" />
+                        <img src="assets/img/team/3.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Hana Plašilová" />
                         <h4>Mgr. Hana Plašilová</h4>
                         <p class="text-muted">učitelka ZŠ</p>
                     </div>
@@ -549,7 +572,8 @@
                 <!-- Roman Zwiefelhofer -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/5.jpg" class="rounded-circle scale" alt="Roman Zwiefelhofer" />
+                        <img src="assets/img/team/5.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Roman Zwiefelhofer" />
                         <h4>Roman Zwiefelhofer</h4>
                         <p class="text-muted">jednatel společnosti</p>
                     </div>
@@ -558,7 +582,8 @@
                 <!-- Veronika Petříková -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/7.jpg" class="rounded-circle scale" alt="Veronika Petříková" />
+                        <img src="assets/img/team/7.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Veronika Petříková" />
                         <h4>Mgr. Veronika Petříková</h4>
                         <p class="text-muted">advokátka</p>
                     </div>
@@ -567,7 +592,8 @@
                 <!-- Iveta Nývltová -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/10.jpg" class="rounded-circle scale" alt="Iveta Nývltová" />
+                        <img src="assets/img/team/10.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Iveta Nývltová" />
                         <h4>Iveta Nývltová</h4>
                         <p class="text-muted">producentka</p>
                     </div>
@@ -576,7 +602,8 @@
                 <!-- František Pěkný -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/9.jpg" class="rounded-circle scale" alt="František Pěkný" />
+                        <img src="assets/img/team/9.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="František Pěkný" />
                         <h4>František Pěkný</h4>
                         <p class="text-muted">jednatel společnosti</p>
                     </div>
@@ -585,7 +612,8 @@
                 <!-- Aleš Bernard -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/11.jpg" class="rounded-circle scale" alt="Aleš Bernard" />
+                        <img src="assets/img/team/11.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Aleš Bernard" />
                         <h4>Aleš Bernard</h4>
                         <p class="text-muted">obchodní manažer</p>
                     </div>
@@ -594,7 +622,8 @@
                 <!-- Pavla Náglová -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/12.png" class="rounded-circle scale" alt="Pavla Náglová" />
+                        <img src="assets/img/team/12.png" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Pavla Náglová" />
                         <h4>Pavla Náglová</h4>
                         <p class="text-muted">státní zaměstnankyně</p>
                     </div>
@@ -603,7 +632,8 @@
                 <!-- Miloslav Krýsl -->
                 <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                     <div class="team-member">
-                        <img src="assets/img/team/13.jpg" class="rounded-circle scale" alt="Miloslav Krýsl" />
+                        <img src="assets/img/team/13.jpg" class="rounded-circle scale" loading="lazy" decoding="async"
+                            width="224" height="224" alt="Miloslav Krýsl" />
                         <h4>Miloslav Krýsl</h4>
                         <p class="text-muted">živnostník</p>
                     </div>
@@ -665,7 +695,7 @@
             <!-- FormSubmit.co Contact Form -->
             <!-- We use the AJAX endpoint here for JS handling, but the script handles the actual fetch -->
             <form id="contactForm" class="needs-validation" novalidate
-                action="https://formsubmit.co/ajax/nase.rtyne@gmail.cz" method="POST">
+                action="https://formsubmit.co/ajax/nase.rtyne@gmail.com" method="POST">
 
                 <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="Nová zpráva z webu Naše Rtyně">
@@ -678,19 +708,22 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <!-- Name input-->
-                            <input class="form-control" id="name" name="jméno" type="text" placeholder="Vaše jméno *"
+                            <label class="form-label" for="name">Jméno *</label>
+                            <input class="form-control" id="name" name="jméno" type="text" placeholder="Vaše jméno"
                                 required />
                             <div class="invalid-feedback">Prosím vyplňte vaše jméno.</div>
                         </div>
                         <div class="form-group">
                             <!-- Email address input-->
-                            <input class="form-control" id="email" name="email" type="email" placeholder="Váš Email *"
+                            <label class="form-label" for="email">Email *</label>
+                            <input class="form-control" id="email" name="email" type="email" placeholder="Váš Email"
                                 required />
                             <div class="invalid-feedback">Prosím vyplňte platný email.</div>
                         </div>
                         <div class="form-group mb-md-0">
                             <!-- Phone number input-->
-                            <input class="form-control" id="phone" name="telefon" type="tel" placeholder="Váš Telefon *"
+                            <label class="form-label" for="phone">Telefon *</label>
+                            <input class="form-control" id="phone" name="telefon" type="tel" placeholder="Váš Telefon"
                                 required />
                             <div class="invalid-feedback">Prosím vyplňte telefonní číslo.</div>
                         </div>
@@ -698,7 +731,8 @@
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
                             <!-- Message input-->
-                            <textarea class="form-control" id="message" name="zpráva" placeholder="Vaše zpráva *"
+                            <label class="form-label" for="message">Zpráva *</label>
+                            <textarea class="form-control" id="message" name="zpráva" placeholder="Vaše zpráva"
                                 required></textarea>
                             <div class="invalid-feedback">Prosím napište zprávu.</div>
                         </div>
@@ -747,6 +781,11 @@
                 </div>
                 <div class="col-lg-4 text-lg-end">Vytvořil Matěj Jansa</div>
             </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center small text-muted footer-privacy-note">
+                    Web používá analytics pro souhrnné měření návštěvnosti.
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -759,6 +798,126 @@
     <script>
         (function () {
             'use strict'
+
+            var analyticsEvent = function (eventName, props) {
+                // GoatCounter event tracking: send as a custom page path
+                if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+                    var eventPath = '/' + eventName + (props ? '/' + JSON.stringify(props).replace(/"/g, '') : '');
+                    window.goatcounter.count({
+                        path: eventPath,
+                        title: eventName
+                    });
+                }
+            }
+
+            var trackedDepth = { 50: false, 90: false };
+            var handleScrollDepth = function () {
+                var scrollTop = window.scrollY || window.pageYOffset;
+                var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (docHeight <= 0) {
+                    return;
+                }
+
+                var depth = (scrollTop / docHeight) * 100;
+                if (depth >= 50 && !trackedDepth[50]) {
+                    trackedDepth[50] = true;
+                    analyticsEvent('scroll_depth', { percent: '50' });
+                }
+                if (depth >= 90 && !trackedDepth[90]) {
+                    trackedDepth[90] = true;
+                    analyticsEvent('scroll_depth', { percent: '90' });
+                    window.removeEventListener('scroll', handleScrollDepth);
+                }
+            };
+
+            var dotaznikCta = document.getElementById('dotaznikCta');
+            if (dotaznikCta) {
+                dotaznikCta.addEventListener('click', function () {
+                    analyticsEvent('dotaznik_click', { location: 'homepage' });
+                });
+            }
+
+            // Track social button clicks
+            var socialButtons = document.querySelectorAll('a[href^="mailto:"], a[href*="facebook"]');
+            socialButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var platform = this.href.includes('facebook') ? 'facebook' : 'email';
+                    analyticsEvent('social_click', { platform: platform });
+                });
+            });
+
+            // Track PDF downloads
+            var pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+            pdfLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    var fileName = this.href.split('/').pop().replace('.pdf', '');
+                    analyticsEvent('pdf_download', { file: fileName });
+                });
+            });
+
+            // Track priority item clicks
+            var priorityItems = document.querySelectorAll('#priority .col-md-6');
+            priorityItems.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var priorityName = this.querySelector('h4') ? this.querySelector('h4').innerText : 'unknown';
+                    analyticsEvent('priority_click', { priority: priorityName });
+                });
+            });
+
+            // Track navigation link clicks
+            var navLinks = document.querySelectorAll('#mainNav .nav-link');
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    var section = this.innerText || this.textContent;
+                    analyticsEvent('nav_click', { section: section.trim() });
+                });
+            });
+
+            // Track section visibility (when user scrolls into view)
+            var sections = ['vize', 'priority', 'about', 'team', 'contact'];
+            var sectionTracked = {};
+            sections.forEach(function (sectionId) {
+                sectionTracked[sectionId] = false;
+            });
+
+            var handleSectionVisibility = function () {
+                sections.forEach(function (sectionId) {
+                    if (sectionTracked[sectionId]) {
+                        return;
+                    }
+                    var section = document.getElementById(sectionId);
+                    if (!section) {
+                        return;
+                    }
+                    var rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.75) {
+                        sectionTracked[sectionId] = true;
+                        analyticsEvent('section_view', { section: sectionId });
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleSectionVisibility, { passive: true });
+
+            window.addEventListener('scroll', handleScrollDepth, { passive: true });
+
+            // Track masthead CTA button click
+            var masthead = document.querySelector('header.masthead a.btn');
+            if (masthead) {
+                masthead.addEventListener('click', function () {
+                    analyticsEvent('masthead_cta_click', { target: 'priority' });
+                });
+            }
+
+            // Track accordion expand/collapse (when Program section is re-enabled)
+            var accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var isExpanded = !this.classList.contains('collapsed');
+                    var title = this.innerText || this.textContent;
+                    analyticsEvent('accordion_toggle', { section: title.trim().substring(0, 30), expanded: isExpanded });
+                });
+            });
 
             var form = document.getElementById('contactForm');
             var submitButton = document.getElementById('submitButton');
@@ -774,6 +933,7 @@
                 if (!form.checkValidity()) {
                     // If invalid, just show validation styles and stop
                     form.classList.add('was-validated');
+                    analyticsEvent('contact_form_validation_error', {});
                     return;
                 }
 
@@ -789,7 +949,6 @@
                 const formData = new FormData(form);
 
                 // Send Fetch Request to FormSubmit
-                // Send Fetch Request to FormSubmit
                 fetch(form.action, {
                     method: 'POST',
                     body: formData,
@@ -804,16 +963,20 @@
                             form.reset(); // Clear
                             form.classList.remove('was-validated'); // Remove validation styles
                             form.style.display = 'none'; // Hide form
+                            analyticsEvent('contact_form_submit', { result: 'success' });
                             successMessage.classList.remove('d-none');
                             errorMessage.classList.add('d-none');
                         } else {
                             // Server vrátil chybu (např. spam, špatný formát)
-                            throw new Error('Server zamítl odeslání.');
+                            var errorMsg = data.message || 'Server zamítl odeslání';
+                            throw new Error(errorMsg);
                         }
                     })
                     .catch(error => {
                         // Chyba sítě nebo zachycená chyba výše
                         console.error('Submission error:', error);
+                        var errorType = error.message || 'unknown';
+                        analyticsEvent('contact_form_submit', { result: 'error', error: errorType });
                         errorMessage.classList.remove('d-none');
                     })
                     .finally(() => {
