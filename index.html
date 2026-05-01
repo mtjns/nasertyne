@@ -684,6 +684,31 @@
     </section>
 
 
+    <!-- Election Countdown -->
+    <section class="page-section" id="election-countdown">
+        <div class="container text-center py-3">
+            <h3 class="election-heading mb-3">Čas do komunálních voleb</h3>
+            <div id="electionCountdown" class="d-flex justify-content-center align-items-center py-2">
+                <div class="count-block text-center me-2">
+                    <div class="count-part h4 mb-1 text-dark" id="count-days">00</div>
+                    <div class="small text-dark">dní</div>
+                </div>
+                <div class="count-block text-center mx-2">
+                    <div class="count-part h4 mb-1 text-dark" id="count-hours">00</div>
+                    <div class="small text-dark">hod</div>
+                </div>
+                <div class="count-block text-center mx-2">
+                    <div class="count-part h4 mb-1 text-dark" id="count-mins">00</div>
+                    <div class="small text-dark">min</div>
+                </div>
+                <div class="count-block text-center ms-2">
+                    <div class="count-part h4 mb-1 text-dark" id="count-secs">00</div>
+                    <div class="small text-dark">sek</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
@@ -919,6 +944,42 @@
                     analyticsEvent('accordion_toggle', { section: title.trim().substring(0, 30), expanded: isExpanded });
                 });
             });
+
+            // Election countdown (hidden when expired)
+            (function(){
+                var target = new Date('2026-10-09T10:00:00');
+                var el = document.getElementById('electionCountdown');
+                if (!el) return;
+                var daysEl = document.getElementById('count-days');
+                var hoursEl = document.getElementById('count-hours');
+                var minsEl = document.getElementById('count-mins');
+                var secsEl = document.getElementById('count-secs');
+
+                var update = function(){
+                    var now = new Date();
+                    var diff = target - now;
+                    if (diff <= 0) {
+                        var section = document.getElementById('election-countdown');
+                        if (section) section.style.display = 'none';
+                        if (typeof analyticsEvent === 'function') analyticsEvent('election_countdown_expired');
+                        clearInterval(timer);
+                        return;
+                    }
+                    var s = Math.floor(diff/1000);
+                    var days = Math.floor(s/86400); s -= days*86400;
+                    var hours = Math.floor(s/3600); s -= hours*3600;
+                    var mins = Math.floor(s/60); s -= mins*60;
+                    var secs = s;
+                    if (daysEl) daysEl.textContent = String(days).padStart(2,'0');
+                    if (hoursEl) hoursEl.textContent = String(hours).padStart(2,'0');
+                    if (minsEl) minsEl.textContent = String(mins).padStart(2,'0');
+                    if (secsEl) secsEl.textContent = String(secs).padStart(2,'0');
+                };
+                update();
+                var timer = setInterval(update,1000);
+                // track that countdown was shown
+                if (typeof analyticsEvent === 'function') analyticsEvent('election_countdown_view');
+            })();
 
             var form = document.getElementById('contactForm');
             var submitButton = document.getElementById('submitButton');

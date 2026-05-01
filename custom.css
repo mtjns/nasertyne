@@ -331,3 +331,89 @@ section#contact .form-control::placeholder {
         padding: 1.5rem;
     }
 }
+
+/* Election countdown styling */
+section#election-countdown {
+    background: var(--brand-yellow);
+}
+
+section#election-countdown .container {
+    padding-top: 0rem !important;
+}
+
+section#election-countdown .election-heading {
+    margin-top: 0rem;
+    margin-bottom: 0.75rem;
+}
+
+section#election-countdown #electionCountdown {
+    gap: 0.2rem;
+}
+
+section#election-countdown #electionCountdown .count-block {
+    margin-left: 0.7ch !important;
+    margin-right: 0.7ch !important;
+}
+
+section#election-countdown .h4 {
+    color: var(--brand-blue);
+    font-weight: 800;
+}
+
+section#election-countdown .small {
+    color: rgba(13, 20, 40, 0.8);
+}
+
+@media (max-width: 576px) {
+    section#election-countdown .d-flex {
+        flex-wrap: wrap;
+        gap: 0.15rem;
+    }
+
+    section#election-countdown #electionCountdown .count-block {
+        margin-left: 0.05rem !important;
+        margin-right: 0.05rem !important;
+    }
+}
+
+/* Fixed-width clock digits */
+.count-part {
+    font-family: inherit;
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    min-width: 2.4ch;
+    font-size: 3.25rem;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Make the block itself centered and stack label below number */
+.count-block {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* center digits inside and keep fixed-width numerals */
+.count-part {
+    text-align: center;
+}
+
+.election-heading {
+    font-weight: 700;
+    color: var(--brand-blue);
+}
+
+.count-block .small {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 576px) {
+    .count-sep {
+        top: -0.2rem;
+    }
+}
