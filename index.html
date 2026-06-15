@@ -473,7 +473,8 @@
                                     Dnes spouštíme dotazník a chceme slyšet, co vás ve Rtyni skutečně trápí...</p>
                             </div>
                             <div class="card-footer bg-transparent border-0 pb-4 pt-0">
-                                <a href="/dotaznik" target="_blank" class="btn btn-outline-primary btn-sm">
+                                <a id="aktualitaDotaznikCta" href="/dotaznik" target="_blank"
+                                    class="btn btn-outline-primary btn-sm">
                                     Otevřít dotazník <i class="fas fa-external-link-alt ms-1"></i>
                                 </a>
                             </div>
@@ -498,7 +499,7 @@
                                     Je neoddiskutovatelné...</p>
                             </div>
                             <div class="card-footer bg-transparent border-0 pb-4 pt-0">
-                                <a href="https://www.facebook.com/61586873237147" target="_blank"
+                                <a id="aktualitaVodaCta" href="https://www.facebook.com/61586873237147" target="_blank"
                                     rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
                                     Pokračovat na Facebooku <i class="fab fa-facebook-f ms-1"></i>
                                 </a>
@@ -554,7 +555,7 @@
                             </div>
 
                             <div class="card-footer bg-transparent border-0 pb-4 pt-0">
-                                <a href="https://www.facebook.com/61586873237147" target="_blank"
+                                <a id="aktualitaAmfCta" href="https://www.facebook.com/61586873237147" target="_blank"
                                     rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">Pokračovat na
                                     Facebooku<i class="fab fa-facebook-f ms-1"></i>
                                 </a>
@@ -1005,7 +1006,7 @@
             'use strict'
 
             var analyticsEvent = function (eventName, props) {
-                // GoatCounter event tracking: send as a custom page path
+                // GoatCounter event tracking
                 if (window.goatcounter && typeof window.goatcounter.count === 'function') {
                     var eventPath = '/' + eventName + (props ? '/' + JSON.stringify(props).replace(/"/g, '') : '');
                     window.goatcounter.count({
@@ -1039,6 +1040,27 @@
             if (dotaznikCta) {
                 dotaznikCta.addEventListener('click', function () {
                     analyticsEvent('dotaznik_click', { location: 'homepage' });
+                });
+            }
+
+            var aktualitaAmfCta = document.getElementById('aktualitaAmfCta');
+            if (aktualitaAmfCta) {
+                aktualitaAmfCta.addEventListener('click', function () {
+                    analyticsEvent('aktuality_click', { item: 'amfiteatr' });
+                });
+            }
+
+            var aktualitaDotaznikCta = document.getElementById('aktualitaDotaznikCta');
+            if (aktualitaDotaznikCta) {
+                aktualitaDotaznikCta.addEventListener('click', function () {
+                    analyticsEvent('aktuality_click', { item: 'dotaznik' });
+                });
+            }
+
+            var aktualitaVodaCta = document.getElementById('aktualitaVodaCta');
+            if (aktualitaVodaCta) {
+                aktualitaVodaCta.addEventListener('click', function () {
+                    analyticsEvent('aktuality_click', { item: 'voda' });
                 });
             }
 
