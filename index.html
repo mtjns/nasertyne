@@ -58,15 +58,10 @@
     <!-- Font Awesome icons -->
     <script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-    <!-- Preconnect to Google fonts for faster font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"
-        type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&display=swap" rel="stylesheet"
-        type="text/css" />
+    <!-- Self-hosted fonts (Montserrat, Roboto Slab) - no external fetch -->
+    <link rel="preload" href="assets/fonts/montserrat-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/roboto-slab-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="assets/fonts/fonts.css" rel="stylesheet" type="text/css" />
 
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="style.css" rel="stylesheet" />
@@ -685,7 +680,7 @@
                     <!-- Petr Garček -->
                     <div class="col-lg-4 col-md-5 mb-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/1.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/petr-garcek.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Petr Garček" />
                             <h4>Petr Garček</h4>
                             <p class="text-muted">oblastní zástupce<br>zmocněnec sdružení</p>
@@ -695,7 +690,7 @@
                     <!-- Petra Dědková -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/8.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/petra-dedkova.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Petra Dědková" />
                             <h4>BcA. Ing. Petra Dědková</h4>
                             <p class="text-muted">ředitelka tanečního studia</p>
@@ -705,7 +700,7 @@
                     <!-- Lukáš Nývlt -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/6.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/lukas-nyvlt.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Lukáš Nývlt" />
                             <h4>Lukáš Nývlt</h4>
                             <p class="text-muted">vedoucí skladu</p>
@@ -715,7 +710,7 @@
                     <!-- Jan Franěk -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/4.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/jan-franek.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Jan Franěk" />
                             <h4>Bc. Jan Franěk</h4>
                             <p class="text-muted">specialista kontrolor</p>
@@ -725,7 +720,7 @@
                     <!-- Aleš Jansa -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/2.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/ales-jansa.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Aleš Jansa" />
                             <h4>Aleš Jansa</h4>
                             <p class="text-muted">živnostník</p>
@@ -735,7 +730,7 @@
                     <!-- Hana Plašilová -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/3.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/hana-plasilova.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Hana Plašilová" />
                             <h4>Mgr. Hana Plašilová</h4>
                             <p class="text-muted">učitelka ZŠ</p>
@@ -746,7 +741,7 @@
                     <!-- Roman Zwiefelhofer -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/5.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/roman-zwiefelhofer.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Roman Zwiefelhofer" />
                             <h4>Roman Zwiefelhofer</h4>
                             <p class="text-muted">jednatel společnosti</p>
@@ -756,7 +751,7 @@
                     <!-- Veronika Petříková -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/7.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/veronika-petrikova.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Veronika Petříková" />
                             <h4>Mgr. Veronika Petříková</h4>
                             <p class="text-muted">advokátka</p>
@@ -766,7 +761,7 @@
                     <!-- Iveta Nývltová -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/10.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/iveta-nyvltova.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Iveta Nývltová" />
                             <h4>Iveta Nývltová</h4>
                             <p class="text-muted">producentka</p>
@@ -776,7 +771,7 @@
                     <!-- František Pěkný -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/9.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/frantisek-pekny.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="František Pěkný" />
                             <h4>František Pěkný</h4>
                             <p class="text-muted">jednatel společnosti</p>
@@ -786,7 +781,7 @@
                     <!-- Aleš Bernard -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/11.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/ales-bernard.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Aleš Bernard" />
                             <h4>Aleš Bernard</h4>
                             <p class="text-muted">obchodní manažer</p>
@@ -796,7 +791,7 @@
                     <!-- Pavla Náglová -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/12.png" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/pavla-naglova.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Pavla Náglová" />
                             <h4>Pavla Náglová</h4>
                             <p class="text-muted">státní zaměstnankyně</p>
@@ -806,10 +801,40 @@
                     <!-- Miloslav Krýsl -->
                     <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
                         <div class="team-member">
-                            <img src="assets/img/team/13.jpg" class="rounded-circle scale" loading="lazy"
+                            <img src="assets/img/team/miloslav-krysl.webp" class="rounded-circle scale"
                                 decoding="async" width="224" height="224" alt="Miloslav Krýsl" />
                             <h4>Miloslav Krýsl</h4>
                             <p class="text-muted">živnostník</p>
+                        </div>
+                    </div>
+
+                    <!-- Katka -->
+                    <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
+                        <div class="team-member">
+                            <img src="assets/img/team/katka.webp" class="rounded-circle scale" loading="lazy"
+                                decoding="async" width="224" height="224" alt="Katka" />
+                            <h4>Katka</h4>
+                            <p class="text-muted"></p>
+                        </div>
+                    </div>
+
+                    <!-- Šárka -->
+                    <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
+                        <div class="team-member">
+                            <img src="assets/img/team/sarka.webp" class="rounded-circle scale" loading="lazy"
+                                decoding="async" width="224" height="224" alt="Šárka" />
+                            <h4>Šárka</h4>
+                            <p class="text-muted"></p>
+                        </div>
+                    </div>
+
+                    <!-- Dušan -->
+                    <div class="col-lg-4 col-md-5 mb-md-4 mb-sm-0">
+                        <div class="team-member">
+                            <img src="assets/img/team/dusan.webp" class="rounded-circle scale" loading="lazy"
+                                decoding="async" width="224" height="224" alt="Dušan" />
+                            <h4>Dušan</h4>
+                            <p class="text-muted"></p>
                         </div>
                     </div>
 
@@ -881,7 +906,7 @@
                         <div class="small text-dark">sek</div>
                     </div>
                 </div>
-                <p id="countdownTextAlt" class="visually-hidden">Komunální volby se konají 9. října 2026 v 10:00.
+                <p id="countdownTextAlt" class="visually-hidden">Komunální volby se konají 9. října 2026 v 14:00.
                     Odpočet je zobrazen pouze vizuálně.</p>
             </div>
         </section>
@@ -1183,7 +1208,7 @@
 
             // Election countdown (hidden when expired)
             (function () {
-                var target = new Date('2026-10-09T10:00:00');
+                var target = new Date('2026-10-09T14:00:00');
                 var el = document.getElementById('electionCountdown');
                 if (!el) return;
                 var daysEl = document.getElementById('count-days');
