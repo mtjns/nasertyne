@@ -286,8 +286,73 @@ header.masthead {
 }
 
 /* Team */
+@media (min-width: 768px) {
+    .team-member {
+        margin-bottom: 6rem;
+        margin-top: 1rem;
+    }
+}
+
 .team-member img {
     object-fit: cover;
+}
+
+/* Candidate number badge (top-left of photo) */
+.team-photo {
+    position: relative;
+    display: inline-block;
+}
+
+.team-num {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 2.9rem;
+    height: 2.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand-blue);
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    line-height: 1;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Reserve the role line so cards align even when a candidate has no role */
+.team-member .text-muted {
+    min-height: 1.75rem;
+}
+
+/* Candidate bio under each card */
+.team-bio {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    padding: 0 0.7rem;
+}
+
+/* Mobile: remove padding to maximize space for text */
+@media (max-width: 576px) {
+    .team-bio {
+        padding: 0;
+    }
+}
+
+.team-bio p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #5a6570;
+    margin-bottom: 0.3rem;
+}
+
+.team-bio p:last-child {
+    margin-bottom: 0;
 }
 
 /* Masthead */
