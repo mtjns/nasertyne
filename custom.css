@@ -4,7 +4,7 @@
     --brand-blue: hsl(223, 88%, 35%);
     --brand-blue-alt: #0d48e2;
     --brand-yellow: #fedf00;
-    --header-bg: rgba(6, 32, 96, 0.6);
+    --header-bg: rgba(6, 32, 96, 0.5);
 }
 
 /* --- NAVBAR OVERRIDES --- */
