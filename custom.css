@@ -356,80 +356,28 @@ header.masthead {
     margin-bottom: 0;
 }
 
-/* --- Program  --- */
-.program-num {
-    flex: 0 0 auto;
-    width: 2.6rem;
-    height: 2.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--brand-blue);
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border-radius: 50%;
-}
-
-.program-area {
-    margin-bottom: 2.5rem;
-}
-
-.program-area h4 {
+/* --- Program --- */
+.program-card h4 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     color: #212529;
+    font-size: 1.4rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 4px solid var(--brand-blue);
 }
 
-.program-area ul li {
+.program-card li {
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
 
-.program-closing {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 1.75rem;
+.program-card li:last-child {
+    margin-bottom: 0;
 }
 
-/* --- Program: varianty k porovnání (DOČASNÉ, po výběru smazat) --- */
-.pv-variant {
-    margin-bottom: 4.5rem;
-}
-
-.pv-label {
-    display: inline-block;
+.program-card li strong {
     font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #fff;
-    background-color: var(--brand-blue);
-    padding: 0.4rem 1.25rem;
-    border-radius: 2rem;
-}
-
-.pv-heading {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    color: #212529;
-}
-
-.pv-list li {
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-}
-
-.pv-bignum {
-    flex: 0 0 auto;
-    min-width: 4.75rem;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 3.5rem;
-    line-height: 1;
-    color: rgba(11, 55, 168, 0.18);
 }
 
 /* Masthead */
