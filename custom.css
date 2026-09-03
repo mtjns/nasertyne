@@ -67,6 +67,11 @@
     #mainNav .navbar-brand img {
         height: 3rem;
     }
+
+    /* Center the menu items on mobile */
+    #mainNav .navbar-nav {
+        text-align: center;
+    }
 }
 
 
