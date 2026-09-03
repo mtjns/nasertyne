@@ -378,6 +378,56 @@ header.masthead {
     font-family: "Montserrat", sans-serif;
 }
 
+/* Program: rozbalovací na mobilu; na desktopu vždy otevřené */
+.program-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    background: none;
+    border: 0;
+    text-align: left;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.program-chevron {
+    display: inline-block;
+    flex-shrink: 0;
+    color: var(--brand-blue);
+}
+
+.program-chevron .chev-up {
+    display: none;
+}
+
+.program-toggle[aria-expanded="true"] .chev-down {
+    display: none;
+}
+
+.program-toggle[aria-expanded="true"] .chev-up {
+    display: inline-block;
+}
+
+@media (min-width: 992px) {
+    .program-collapse {
+        display: block !important;
+        height: auto !important;
+    }
+
+    .program-chevron {
+        display: none;
+    }
+
+    .program-toggle {
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
 /* Masthead */
 header.masthead .masthead-subheading {
     margin-bottom: 2rem;
