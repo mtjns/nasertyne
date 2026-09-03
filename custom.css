@@ -338,13 +338,6 @@ header.masthead {
     padding: 0 0.7rem;
 }
 
-/* Mobile: remove padding to maximize space for text */
-@media (max-width: 576px) {
-    .team-bio {
-        padding: 0;
-    }
-}
-
 .team-bio p {
     font-size: 0.9rem;
     line-height: 1.6;
