@@ -96,6 +96,7 @@
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link d-none" href="#vize">Vize</a></li>
                     <li class="nav-item"><a class="nav-link d-none" href="#priority">Priority</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kdo-jsme">Kdo jsme</a></li>
                     <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Kandidáti</a></li>
                     <li class="nav-item"><a class="nav-link" href="#aktuality">Aktuality</a></li>
@@ -125,6 +126,39 @@
                 <h2 class="masthead-subheading">Společně pro naše město</h2>
             </div>
         </header>
+
+        <!-- Kdo jsme -->
+        <section class="page-section" id="kdo-jsme">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Kdo jsme</h2>
+                    <h3 class="section-subheading text-muted">Sousedé a přátelé, které znáte nejen před volbami.</h3>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-muted">
+                        <p>Jsme sousedé a přátelé, se kterými se léta potkáváte ve spolcích i na kulturních, sportovních
+                            a společenských akcích. Mnozí z nás se aktivně podílejí na organizaci místního života, takže
+                            nás nepotkáváte jen před volbami.</p>
+                        <p>Ne vždy máme na všechno stejný názor, ale vládne mezi námi vzájemný respekt, věcná diskuse a
+                            schopnost se dohodnout. Jsme tým, který na programu pro komunální volby pracoval více než rok.
+                            Náš cíl je jasný: rozvíjet Rtyni jako moderní, klidné a přívětivé místo pro spokojený život
+                            všech generací.</p>
+
+                        <h4 class="mt-5 text-uppercase text-dark h5">Proč kandidujeme</h4>
+                        <p>Vnímáme aktuální stav Rtyně v širších souvislostech. Trápí nás výrazný úbytek obyvatel i jejich
+                            rostoucí věkový průměr. Tento trend má a bude mít zásadní dopad na městský rozpočet. Pomyslné
+                            hodiny na „Staré škole“ ukazují za pět minut dvanáct – budoucí vedení města musí přístup k
+                            řadě věcí radikálně změnit.</p>
+                        <p>Nechceme slibovat nemožné. Chceme naslouchat, hospodařit odpovědně a rozhodovat s ohledem na
+                            dlouhodobý rozvoj. Věříme, že budoucnost Rtyně stojí na spolupráci, otevřené komunikaci a
+                            promyšlených krocích.</p>
+                        <p class="fw-bold text-dark mt-3">Jsme připraveni převzít odpovědnost a společně s vámi pracovat
+                            na tom, aby byla Rtyně i za deset, dvacet nebo třicet let místem, na které budeme všichni
+                            hrdí.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Dotazník -->
         <section class="page-section bg-light d-none" id="dotaznik">
@@ -1600,7 +1634,7 @@
             };
 
             // Track section visibility (when user scrolls into view)
-            var sections = ['vize', 'priority', 'program', 'about', 'team', 'contact'];
+            var sections = ['kdo-jsme', 'vize', 'priority', 'program', 'about', 'team', 'contact'];
             var sectionTracked = {};
             sections.forEach(function (sectionId) {
                 sectionTracked[sectionId] = false;
