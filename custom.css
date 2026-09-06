@@ -266,20 +266,89 @@ section#contact form#contactForm .form-group textarea {
     visibility: visible;
 }
 
-/* --- HEADER BACKGROUND FILTER --- */
+/* --- HERO: team photo with a brand-blue top band --- */
+/* The photo shows the whole team; the text sits in a blue gradient band
+   across the top so the candidates' faces stay visible below it. */
 header.masthead {
-    height: 100vh;
-    background-image: linear-gradient(var(--header-bg), var(--header-bg)), url("./assets/img/header-bg.webp") !important;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    overflow: hidden;
+    background-image: url("./assets/img/spolecne-foto.webp") !important;
+    /* pin to the bottom so the brand wave stays visible */
+    background-position: center bottom !important;
+    background-size: cover !important;
 }
 
-/* Vertically center the hero content on phones */
-@media (max-width: 767.98px) {
+header.masthead::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 48%;
+    background: linear-gradient(to bottom,
+            rgba(6, 32, 96, 0.75),
+            rgba(6, 32, 96, 0.62) 30%,
+            rgba(6, 32, 96, 0.55) 42%,
+            rgba(6, 32, 96, 0));
+    pointer-events: none;
+}
+
+header.masthead .container {
+    position: relative;
+    /* keeps the text above the ::before band */
+    padding-top: 6.5rem;
+}
+
+header.masthead .masthead-heading,
+header.masthead .masthead-subheading {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+header.masthead .hero-word-yellow {
+    color: var(--brand-yellow);
+}
+
+header.masthead .hero-word-green {
+    color: var(--brand-green);
+}
+
+/* Phones & tablet portrait: banner layout so the WHOLE team is visible
+   (no side cropping). Solid blue title band on top, then the full-width
+   photo (incl. the wave) pinned to the bottom. Image ratio 1414 x 947
+   (~1.493). Breakpoint matches the navbar's hamburger switch (992px);
+   wider viewports are effectively landscape, where cover shows everyone. */
+@media (max-width: 991.98px) {
     header.masthead {
-        display: flex;
-        align-items: center;
+        /* fill the screen with blue and pin the photo to the very bottom */
+        min-height: 100vh;
+        min-height: 100svh;
+        height: auto;
+        /* center the title vertically in the blue area above the photo */
         justify-content: center;
+        /* bottom padding reserves room for the full-width photo band;
+           top padding keeps the centred text clear of the fixed navbar */
+        padding: 4rem 1.25rem calc(100vw / 1.493) 1.25rem;
+        background-color: var(--brand-blue);
+        background-size: 100% auto !important;
+        background-position: center bottom !important;
+        background-repeat: no-repeat;
+    }
+
+    /* no gradient band needed – the title sits on solid blue */
+    header.masthead::before {
+        display: none;
+    }
+
+    header.masthead .container {
         padding-top: 0;
-        padding-bottom: 0;
+        padding-bottom: 1.25rem;
     }
 }
 
@@ -449,14 +518,25 @@ header.masthead .masthead-heading {
     margin-bottom: 25px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     header.masthead {
-        padding-top: 17rem;
-        padding-bottom: 12.5rem;
+        /* show the WHOLE photo, uncropped: the hero matches the image's
+           aspect ratio so background: cover fits it exactly (no crop) */
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 1414 / 947;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-position: center !important;
+    }
+
+    header.masthead .container {
+        /* title near the top over the sky, above the team's heads */
+        padding-top: 6.5rem;
     }
 
     header.masthead .masthead-subheading {
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
     }
 
     header.masthead .masthead-heading {
