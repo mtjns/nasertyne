@@ -1834,7 +1834,11 @@
                             revealObserver.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.08, rootMargin: '0px 0px -2% 0px' });
+                    // threshold 0 (not a ratio) so elements taller than the
+                    // viewport — e.g. the full candidate grid on mobile — still
+                    // reveal; the negative bottom margin delays it until the
+                    // element is a little way into view.
+                }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
 
                 revealEls.forEach(function (el) {
                     revealObserver.observe(el);
