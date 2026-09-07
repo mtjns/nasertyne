@@ -56,8 +56,7 @@ The homepage is one file with these `<section>` anchors (also the nav targets):
 - `#dotaznik` — survey call-to-action (links to `/dotaznik`)
 - `#vize` — vision + quote block
 - `#priority` — priority cards (flex row)
-- `#program` — accordion program details, currently **hidden** (nav item has
-  `d-none`; JS already wired for when it's re-enabled)
+- `#program` — accordion program details
 - `#about` — about the association
 - `#team` — candidate grid, one commented block per candidate
 - `#aktuality` — news cards
@@ -123,9 +122,6 @@ There is nothing to install or build. To work on the site:
 
 - `style.css` is huge and machine-generated — searching it is fine, but hand-editing
   risks breaking the theme. Override in `custom.css` instead.
-- The `#program` section and its nav link are intentionally hidden (`d-none`);
-  don't "fix" this without checking intent. The countdown auto-hides after the
-  election date — expected behavior.
 - `old/` is a dead archive kept for reference and is not linked anywhere on the
   live site.
 - Meta tags (Open Graph / Twitter / Schema.org JSON-LD) are duplicated across
