@@ -693,3 +693,28 @@ section#election-countdown .small {
         radial-gradient(60% 55% at 88% 8%, rgba(13, 72, 226, 0.08) 0%, rgba(13, 72, 226, 0) 60%),
         linear-gradient(165deg, #eef4ff 0%, #ffffff 46%, #f5f9ff 100%);
 }
+
+/* --- SCROLL REVEAL ANIMATIONS --- */
+/* Elements fade + slide up as they scroll into view. The hidden initial
+   state is applied ONLY when JS has confirmed IntersectionObserver support
+   (via the .reveal-enabled class on <html>), so no-JS users see everything. */
+.reveal-enabled .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.4s ease,
+        transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal-enabled .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Motion-sensitive visitors: show content immediately, no movement. */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-enabled .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
