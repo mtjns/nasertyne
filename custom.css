@@ -684,3 +684,12 @@ section#election-countdown .small {
         top: -0.2rem;
     }
 }
+
+/* --- "KDO JSME" SECTION BACKGROUND --- */
+/* Soft brand-tinted gradient so the opening section reads warmer than plain
+   white, with a faint blue glow in the top-right corner for depth. */
+#kdo-jsme {
+    background:
+        radial-gradient(60% 55% at 88% 8%, rgba(13, 72, 226, 0.08) 0%, rgba(13, 72, 226, 0) 60%),
+        linear-gradient(165deg, #eef4ff 0%, #ffffff 46%, #f5f9ff 100%);
+}
